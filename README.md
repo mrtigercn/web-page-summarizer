@@ -25,19 +25,19 @@ Modified methods – Use nltk to:
 stem a sentence - loop through each word and find the stem of it using the nltk PorterStemmer. you can use a different stemmer if you like like the LancasterStemmer or RegexpStemmer('ing') to remove specific attributes from a word
     
 def stemSentence(self, sentence, stemmer):
-        words = []
-        for word in sentence:
-            w = stemmer.stem(word)
-            words.append( w )
-        return words
+    words = []
+    for word in sentence:
+        w = stemmer.stem(word)
+        words.append( w )
+    return words
     
 steam and remove any stop words form a sentence this will remove words such as 'The', 'and', 'or' that has no value in regard to the value of the sentence
 
-def steamAndRemoveStopWords(self, sentence, stemmer ):  
-           s = word_tokenize(sentence)
-           s1 = [w for w in s if not w in stopwords.words('english')]
-           s2 = self.stemSentence( s1, stemmer )
-           return s2
+def steamAndRemoveStopWords(self, sentence, stemmer ):
+    s = word_tokenize(sentence)
+    s1 = [w for w in s if not w in stopwords.words('english')]
+    s2 = self.stemSentence( s1, stemmer )
+    return s2
            
 Extracting the content of a url is easy when you are using Goose. Using the Goose library to extract the content of a url returing the title of it and the content of the page.
 The great thing about using Goose it that it already take care of everything related to striping tags and such
