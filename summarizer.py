@@ -7,7 +7,7 @@ from nltk.stem.porter import *
 from nltk.tokenize import word_tokenize
 import sys
 
-# summarizer class
+# summarizer class - adopted from - http://thetokenizer.com/, https://gist.github.com/shlomibabluki/5473521
 # the idea behind the class is as following
 # 1. split the text into sentences
 # 2. create a clean version of the text - remove stop words, and stem the words
