@@ -6,6 +6,7 @@ Web page text summarizer with nltk and goose
 adopted from the original tokenizer code - https://gist.github.com/shlomibabluki/5473521 to include nltk functions and goose integration to pull content from a url
 
 The idea behind the class is as following
+
 1. split the text into sentences
 
 2. create a clean version of the text - remove stop words, and stem the words so when we compare the words we compear between similar words even if originally they were written in different forms
